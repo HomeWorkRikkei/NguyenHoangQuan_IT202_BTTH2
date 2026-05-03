@@ -73,3 +73,17 @@ DELETE FROM movies
 WHERE id = 'M03';
 
 SET SQL_SAFE_UPDATES = 1;
+
+select * from movies where minutes>90 and minutes<120;
+
+SELECT * FROM bookings 
+WHERE showtime_id = 'S02' 
+ORDER BY booking_date DESC;
+
+SELECT * FROM movies 
+WHERE age_restiction = 18 OR minutes > 150;
+
+SELECT * FROM showtimes 
+WHERE ticket_price > 100000 
+AND MONTH(show_time) = MONTH(CURRENT_DATE()) 
+AND YEAR(show_time) = YEAR(CURRENT_DATE());
